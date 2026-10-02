@@ -1,0 +1,23 @@
+.mass-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.sacrament-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px 48px;
+  margin-top: 32px;
+}
+.sacrament-list__item {
+  border-left: 2px solid var(--accent-blue);
+  padding-left: 20px;
+}
+.sacrament-list__item p { font-size: 0.94rem; }
+
+@media (max-width: 900px) {
+  .mass-grid { grid-template-columns: 1fr; }
+  .sacrament-list { grid-template-columns: 1fr; }
+}

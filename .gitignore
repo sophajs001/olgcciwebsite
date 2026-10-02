@@ -1,0 +1,10 @@
+node_modules/
+dist/
+dist-upload/
+dist-upload.zip
+dist.zip
+.vite/
+.vscode/
+.env
+*.log
+.DS_Store

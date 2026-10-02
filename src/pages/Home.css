@@ -1,0 +1,59 @@
+﻿.home-story { --home-warm: #f7f5f0; }
+.home-story .home-kicker { display: block; font-size: .76rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--blue-700); margin-bottom: 20px; }
+.home-story h2 { font-size: clamp(2rem, 3.6vw, 3.15rem); }
+.home-story h2 em { font-weight: 400; }
+.home-story .home-lead { font-size: 1.22rem; color: var(--blue-900); line-height: 1.65; }
+.home-origin__layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 70px; }
+.home-history { border-left: 2px solid #abc3df; padding-left: 24px; margin-top: 30px; }
+.home-history h3 { font-size: 1.55rem; }
+.home-belong { background: var(--home-warm); }
+.home-belong__layout { display: grid; grid-template-columns: .85fr 1.15fr; gap: 70px; align-items: center; }
+.home-community-photo figure { margin: 0; max-width: 340px; }
+.home-community-photo img { width: 100%; height: auto; border-radius: 120px 120px 4px 4px; }
+.home-community-photo figcaption { padding: 15px 0 0; font-family: var(--font-display); font-size: 1.25rem; color: var(--blue-900); }
+.home-shepherd { background: var(--blue-900); }
+.home-shepherd__layout { display: grid; grid-template-columns: 1fr 260px; gap: 85px; align-items: center; }
+.home-shepherd h2 { color: white; }
+.home-shepherd p { color: #dbe7f7; }
+.home-shepherd .home-kicker { color: #a9ceff; }
+.home-shepherd__closing { border-top: 1px solid #ffffff30; padding-top: 20px; font-style: italic; }
+.home-priest-photo { text-align: center; }
+.home-priest-photo img { width: 220px; height: 280px; object-fit: cover; object-position: center 25%; margin: 0 auto; border-radius: 110px 110px 4px 4px; }
+.home-priest-photo span { display: block; margin-top: 16px; color: #dbe7f7; font-size: .85rem; }
+.home-practices { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 36px; margin-top: 40px; }
+.home-practices > div { border-top: 1px solid var(--line); padding-top: 24px; }
+.home-practice-number { color: var(--blue-600); font-family: var(--font-display); font-size: 2rem; display: block; margin-bottom: 14px; }
+.home-first-visit { background: var(--surface-blue); text-align: center; }
+.home-first-visit p { max-width: 580px; margin: 20px auto 28px; }
+@media(max-width: 760px) {
+  .home-origin__layout, .home-belong__layout, .home-shepherd__layout { grid-template-columns: 1fr; gap: 28px; }
+  .home-story .section { padding: 50px 0; }
+  .home-community-photo figure { max-width: 240px; margin: 0 auto; }
+  .home-priest-photo img { width: 155px; height: 200px; }
+  .home-practices { grid-template-columns: 1fr; gap: 16px; margin-top: 25px; }
+  .home-practices > div { display: grid; grid-template-columns: 40px 1fr; gap: 0 16px; }
+  .home-practice-number { grid-row: span 2; }
+  .home-practices p { margin-top: 0; }
+}
+/* Keep the homepage story readable without waiting for scroll-triggered reveals. */
+.home-story .fade-up { opacity: 1; transform: none; }
+
+.home-community-photo img,
+.home-priest-photo img {
+  border-radius: 0 64px 0 0;
+  box-shadow: 0 12px 30px rgba(6, 36, 92, .14);
+}
+.home-priest-photo img { border: 1px solid rgba(255, 255, 255, .22); }
+@media (max-width: 760px) {
+  .home-community-photo img,
+  .home-priest-photo img { border-top-right-radius: 40px; }
+}
+
+.home-community-photo figure { max-width: 420px; }
+.home-shepherd__layout { grid-template-columns: 1fr 380px; gap: 60px; }
+.home-priest-photo img { width: 100%; max-width: 380px; height: auto; aspect-ratio: 3 / 4; object-fit: cover; object-position: center top; margin: 0 auto; }
+@media(max-width:760px) {
+  .home-shepherd__layout { grid-template-columns: 1fr; gap: 28px; }
+  .home-community-photo figure { max-width: 420px; }
+  .home-priest-photo img { width: 100%; max-width: 340px; height: auto; }
+}

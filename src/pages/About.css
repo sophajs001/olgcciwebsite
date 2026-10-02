@@ -1,0 +1,22 @@
+.about-history {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.about-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 32px;
+}
+.about-pillars__item {
+  border-top: 2px solid var(--accent-blue);
+  padding-top: 18px;
+}
+
+@media (max-width: 900px) {
+  .about-history { grid-template-columns: 1fr; }
+  .about-pillars { grid-template-columns: 1fr; }
+}

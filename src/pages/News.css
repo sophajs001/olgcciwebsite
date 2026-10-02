@@ -1,0 +1,15 @@
+.notices { max-width: 760px; }
+.notices__list {
+  list-style: none;
+  padding: 0;
+  margin: 28px 0 0;
+  background: var(--surface-white);
+  border: 1px solid var(--accent-blue);
+}
+.notices__list li {
+  padding: 18px 24px;
+  border-bottom: 1px dashed var(--line);
+  font-size: 0.96rem;
+  color: var(--ink-soft);
+}
+.notices__list li:last-child { border-bottom: none; }

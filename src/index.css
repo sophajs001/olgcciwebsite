@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@400;500;600&display=swap');
+
+:root {
+  --blue-900: #06245C;
+  --blue-700: #003898;
+  --blue-600: #1955B0;
+  --surface-white: #FFFFFF;
+  --surface-blue: #EDF4FF;
+  --accent-blue: #1754B1;
+  --accent-light: #A9CEFF;
+  --ink: #17243B;
+  --ink-soft: #4B5C76;
+  --line: rgba(0, 56, 152, 0.16);
+
+  --font-display: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
+  --font-body: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --container: 1120px;
+  --radius: 2px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--surface-white);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--blue-900);
+  font-weight: 600;
+  margin: 0 0 0.5em;
+  letter-spacing: 0.005em;
+}
+
+h1 { font-size: clamp(2.6rem, 5vw, 4.2rem); font-weight: 500; line-height: 1.05; }
+h2 { font-size: clamp(1.9rem, 3vw, 2.6rem); line-height: 1.15; }
+h3 { font-size: 1.4rem; line-height: 1.25; }
+
+p { color: var(--ink-soft); max-width: 62ch; }
+
+a { color: var(--blue-700); text-decoration: none; }
+
+img, svg { display: block; max-width: 100%; }
+
+button { font-family: var(--font-body); cursor: pointer; }
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.eyebrow-rule {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.eyebrow-rule::before {
+  content: '';
+  width: 34px;
+  height: 1px;
+  background: var(--accent-blue);
+}
+.eyebrow-rule span {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--accent-blue);
+}
+
+.section {
+  padding: 88px 0;
+}
+.section--alt {
+  background: var(--surface-blue);
+}
+.section--navy {
+  background: var(--blue-900);
+  color: var(--surface-white);
+}
+.section--navy h2, .section--navy h3 { color: var(--surface-white); }
+.section--navy p { color: rgba(255, 255, 255, 0.75); }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 14px 28px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn--primary {
+  background: var(--accent-blue);
+  color: var(--surface-white);
+  box-shadow: 0 8px 20px -8px rgba(23, 84, 177, 0.6);
+}
+.btn--primary:hover { background: var(--blue-700); box-shadow: 0 10px 24px -8px rgba(23, 84, 177, 0.75); }
+.btn--outline {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: var(--surface-white);
+}
+.btn--outline:hover { border-color: var(--accent-blue); color: var(--accent-light); }
+.btn--navy {
+  border-color: var(--blue-700);
+  color: var(--blue-700);
+}
+.btn--navy:hover { background: var(--blue-700); color: var(--surface-white); }
+.btn--whatsapp { background: #2FAE60; color: #fff; }
+.btn--whatsapp:hover { background: #35c96c; }
+
+/* Building-fund progress bar */
+.progress {
+  height: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.progress__fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-light));
+  border-radius: 999px;
+  transition: width 1.2s ease;
+}
+.progress-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Arch motif -- the recurring structural device, echoing church architecture */
+.arch {
+  border-radius: 999px 999px 4px 4px;
+  position: relative;
+  overflow: hidden;
+}
+.arch-frame {
+  border: 1px solid var(--line);
+  border-radius: 999px 999px 4px 4px;
+  padding: 6px;
+}
+
+.photo-slot {
+  background:
+    repeating-linear-gradient(135deg, rgba(0,56,152,0.06) 0 2px, transparent 2px 14px),
+    linear-gradient(160deg, var(--blue-700), var(--blue-900));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.55);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 20px;
+}
+.photo-slot span { max-width: 22ch; }
+
+.lift { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.lift:hover { transform: translateY(-4px); box-shadow: 0 16px 32px -16px rgba(6, 36, 92, 0.35); }
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-up { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 36px;
+}
+
+@media (max-width: 720px) {
+  .section { padding: 64px 0; }
+}
+@media (max-width: 900px) {
+  .grid-3 { grid-template-columns: 1fr; }
+}
+
+/* Display the parish's transparent logo without a surrounding panel. */
+.parish-logo { display: block; object-fit: contain; flex-shrink: 0; background: transparent; border: 0; border-radius: 0; padding: 0; box-shadow: none; }
+.donate-link { display: inline-flex; align-items: center; gap: 9px; min-height: 44px; padding: 10px 0; color: var(--blue-700); background: transparent; border: 0; border-radius: 0; box-shadow: none; font-weight: 600; letter-spacing: .05em; }
+.donate-link::after { content: '→'; transition: transform .2s ease; }
+.donate-link:hover { color: var(--blue-700); text-decoration: underline; text-underline-offset: 6px; }
+.donate-link:hover::after { transform: translateX(4px); }
+.hero .donate-link, .footer .donate-link, .section--navy .donate-link { color: var(--accent-light); }
+.hero .donate-link:hover, .footer .donate-link:hover, .section--navy .donate-link:hover { color: #FFFFFF; }
+.donate-link:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
+@media (prefers-reduced-motion: reduce) { .donate-link::after { transition: none; } }
+
+/* Compact controls on tablets and phones. */
+@media (max-width: 1080px) {
+  .btn { padding: 10px 20px; font-size: .86rem; line-height: 1.4; gap: 7px; }
+  .donate-link { font-size: .86rem; padding: 8px 0; }
+}
+@media (max-width: 620px) {
+  .btn { padding: 7px 12px; font-size: .7rem; max-width: 100%; text-align: center; justify-content: center; }
+  .donate-link { font-size: .72rem; }
+  .footer__social a { padding: 7px 12px; font-size: .76rem; }
+}
+@media (max-width: 380px) {
+  .btn { padding: 6px 10px; font-size: .66rem; }
+}
+
+/* Light accents remain readable over the deeper brand-blue sections. */
+.section--navy .eyebrow-rule span { color: var(--accent-light); }
+.section--navy .eyebrow-rule::before, .page-header .eyebrow-rule::before { background: var(--accent-light); }
+.progress { background: #DCE8FA; }
+.progress-card .progress { background: rgba(255, 255, 255, .18); }
+
+/* Approved parish photographs retain their natural proportions. */
+.parish-photo { overflow: hidden; background: var(--blue-900); }
+.parish-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.parish-photo--portrait { background: #080a0e; }
+.parish-photo--portrait img { object-fit: contain; }
+.arch-card__top.parish-photo { height: 290px; }
+.project-figure { margin: 0; }
+.project-figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); }
+.project-figure figcaption { padding: 14px 0; color: var(--text-muted, #596475); font-size: .9rem; }
+.project-image-label { display: inline-block; background: var(--blue-900); color: white; padding: 7px 12px; margin-bottom: 14px; font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.progress-preview { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin: 28px 0; }
+.progress-preview img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+@media (max-width: 600px) { .progress-preview { grid-template-columns: 1fr; } }
+
+@media (max-width: 600px) {
+  .schedule table { table-layout: fixed; }
+  .schedule td { overflow-wrap: anywhere; }
+  .schedule .schedule__time { white-space: normal; }
+}
+
+/* Responsive photographs with one sculpted corner. */
+.parish-photo { max-width: 100%; max-height: 440px; }
+.parish-photo--portrait { width: 100%; max-width: 420px; margin-inline: auto; }
+.arch-card__top.parish-photo { width: calc(100% - 28px); max-width: 380px; height: auto; max-height: none; aspect-ratio: 4 / 5; margin: 14px auto 0; }
+.parish-photo--portrait img { object-fit: cover; object-position: center top; padding: 0; }
+.project-figure { max-width: 1000px; margin: 26px auto; }
+.project-figure img { max-height: 720px; width: 100%; object-fit: contain; background: #f7f8fa; }
+.project-figure--plan { max-width: 620px; }
+.project-figure--plan img { max-height: 720px; }
+.progress-preview img { max-height: 380px; }
+.parish-photo.arch, .arch-card .arch-card__top { border-radius: 0 64px 0 0; overflow: hidden; box-shadow: 0 10px 26px rgba(6,36,92,.10); }
+@media(max-width:600px) {
+ .parish-photo { max-height: 340px; }
+ .parish-photo--portrait { max-width: 340px; }
+   .arch-card__top.parish-photo { max-width: 340px; max-height: none; }
+   .project-figure { max-width: 100%; }
+   .project-figure img { max-height: 460px; }
+   .project-figure--plan { max-width: 400px; }
+   .project-figure--plan img { max-height: 520px; }
+ .progress-preview { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+ .progress-preview img { height: auto; }
+   .progress-preview img { max-height: none; }
+   .parish-photo.arch, .arch-card .arch-card__top { border-top-right-radius: 40px; }
+ }
+
+ /* The parish priest portrait should fill its column, not sit as a shallow crop. */
+ .home-priest-photo img {
+   width: 100%;
+   height: auto;
+   aspect-ratio: 720 / 1031;
+   object-fit: cover;
+   object-position: center top;
+ }
