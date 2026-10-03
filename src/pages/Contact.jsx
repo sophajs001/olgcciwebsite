@@ -24,7 +24,7 @@ export default function Contact() {
         <div className="container contact-layout">
           <Reveal className="contact-details">
             <h3>Parish Office</h3>
-            <p>14 Grace Avenue, Port Harcourt, Rivers State</p>
+            <p>OUR LADY OF GRACE CATHOLIC CHURCH<br />POAT, Iyana Agbala<br />New Ife Road<br />Catholic Archdiocese of Ibadan<br />Oyo State, Nigeria</p>
             <p>Monday – Friday, 9:00am – 4:00pm</p>
             <p>office@olgcc.org</p>
 

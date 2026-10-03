@@ -44,14 +44,14 @@ export default function Footer() {
 
         <div>
           <h4>Visit &amp; Contact</h4>
-          <p>14 Grace Avenue<br />Port Harcourt, Rivers State</p>
+          <p>OUR LADY OF GRACE CATHOLIC CHURCH<br />POAT, Iyana Agbala<br />New Ife Road<br />Catholic Archdiocese of Ibadan<br />Oyo State, Nigeria</p>
           <p>Parish Office: Mon&ndash;Fri, 9am&ndash;4pm</p>
           <p>Parish priest: <a href="tel:+2348066006051">+234 806 600 6051</a><br />office@olgcc.org</p>
         </div>
       </div>
 
       <div className="footer__bottom container">
-        <span>&copy; {new Date().getFullYear()} Our Lady of Grace Catholic Church, Ibadan</span>
+        <span>&copy; {new Date().getFullYear()} Our Lady of Grace Catholic Church</span>
         <span>Powered by <a href="https://sophajs.com" target="_blank" rel="noreferrer">Sophajs Global Tech</a></span>
       </div>
     </footer>
