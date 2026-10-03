@@ -21,6 +21,24 @@ npm run build
 This outputs a static site in `dist/`, which can be deployed to Netlify,
 Vercel, GitHub Pages, or any static host.
 
+## Deploying to WHOGOHOST
+
+In the WHOGOHOST terminal, run this once to clone the repository, build the
+site, and publish the generated files to `public_html`:
+
+```bash
+git clone https://github.com/sophajs001/olgcciwebsite.git "$HOME/olgcciwebsite" && cd "$HOME/olgcciwebsite" && npm install && npm run build && cp -a dist/. "$HOME/public_html/"
+```
+
+For later updates, run:
+
+```bash
+cd "$HOME/olgcciwebsite" && git pull && npm install && npm run build && cp -a dist/. "$HOME/public_html/"
+```
+
+The `.htaccess` file is included in the build for React Router page refreshes.
+This requires Node.js and npm to be available in the hosting account.
+
 ## Project structure
 
 ```
